@@ -2,9 +2,14 @@
 import "./style.css";
 
 window.onload = () => {
-  //write your code here
   document.querySelector(".card").classList.add(generateRandomSuit());
   document.querySelector(".card").innerHTML = generateRandomNumber();
+  setInterval(() => {
+    //write your code here
+    document.querySelector(".card").classList.remove(generateRandomSuit());
+    document.querySelector(".card").classList.add(generateRandomSuit());
+    document.querySelector(".card").innerHTML = generateRandomNumber();
+  }, 2000);
 };
 
 let generateRandomNumber = () => {
